@@ -26,9 +26,8 @@ const Network = ({ data }) => {
           </div>
           <div class="card-body">
             <h5 class="card-title">
-              {data.Network.networkConnections.__typename}
+              List of Network Connections
             </h5>
-
             <textarea
               class="form-control"
               rows="5"

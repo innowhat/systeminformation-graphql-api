@@ -17,7 +17,6 @@ const Os = ({ data }) => {
           </div>
           <div class="card-body">
             <h5 class="card-title">List of users</h5>
-
             <textarea
               class="form-control"
               rows="5"
@@ -25,22 +24,14 @@ const Os = ({ data }) => {
             />
           </div>
           <div class="card-body">
-            <h5 class="card-title">{data.OS.info.uuid}</h5>
-
+            <h5 class="card-title">OS UUID</h5>
             <textarea
               class="form-control"
               rows="5"
               defaultValue={JSON.stringify(data.OS.uuid)}
             />
           </div>
-          <div class="card-body">
-            <h5 class="card-title">{data.OS.shell.__typename}</h5>
-            <textarea
-              class="form-control"
-              rows="5"
-              defaultValue={JSON.stringify(data.OS.shell)}
-            />
-          </div>
+
           <div class="card-body">
             <h5 class="card-title">{data.OS.versions.__typename}</h5>
             <textarea

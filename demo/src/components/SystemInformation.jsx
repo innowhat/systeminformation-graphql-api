@@ -58,419 +58,398 @@ const SystemInformation = () => {
 };
 
 const SYSTEM_INFORMATION = gql`
-  {
-    Hardware {
-      bios {
-        vendor
-        version
-        releaseDate
-        revision
-      }
-      system {
-        manufacturer
-        brand
-        version
-        serial
-        uuid
-        sku
-      }
-      chassis {
-        manufacturer
-        model
-        type
-        version
-        serial
-        assetTag
-        sku
-      }
-      baseboard {
-        manufacturer
-        model
-        version
-        serial
-        assetTag
-      }
+{
+  Hardware {
+    bios {
+      vendor
+      version
+      releaseDate
+      revision
     }
-    Cpu {
-      cpu {
-        manufacturer
-        brand
-        speed
-        speedmin
-        speedmax
-        governor
-        cores
-        physicalCores
-        processors
-        socket
-        vendor
-        family
-        model
-        stepping
-        revision
-        voltage
-      }
-      flag {
-        string
-      }
-      cache {
-        l1d
-        l1i
-        l2
-        l3
-      }
-      temperature {
-        main
-        max
-      }
-      currentspeed {
-        avg
-        min
-        max
-      }
+    system {
+      manufacturer
+      brand
+      version
+      serial
+      uuid
+      sku
     }
-    Memory {
-      memory {
-        total
-        free
-        speed
-        used
-        active
-        buffcache
-        buffers
-        cached
-        slab
-        available
-        swaptotal
-        swapused
-        swapfree
-      }
-      layout {
-        size
-        bank
-        type
-        clockSpeed
-        formFactor
-        manufacturer
-        partNum
-        serialNum
-        voltageConfigured
-        voltageMin
-        voltageMax
-      }
-      layouts {
-        size
-        bank
-        type
-        clockSpeed
-        formFactor
-        manufacturer
-        partNum
-        serialNum
-        voltageConfigured
-        voltageMin
-        voltageMax
-      }
+    chassis {
+      manufacturer
+      model
+      type
+      version
+      serial
+      assetTag
+      sku
     }
-    Battery {
-      battery {
-        hasbattery
-        cyclecount
-        ischarging
-        designedcapacity
-        maxcapacity
-        currentcapacity
-        capacityUnit
-        voltage
-        percent
-        timeremaining
-        acconnected
-        type
-        model
-        manufacturer
-        serial
-      }
-    }
-    Graphics {
-      display {
-        model
-        vendor
-        main
-        builtin
-        connection
-        sizex
-        sizey
-        pixeldepth
-        resolutionx
-        resolutiony
-        currentResX
-        currentResY
-        positionX
-        positionY
-        currentRefreshRate
-      }
-      displays {
-        model
-        vendor
-        main
-        builtin
-        connection
-        sizex
-        sizey
-        pixeldepth
-        resolutionx
-        resolutiony
-        currentResX
-        currentResY
-        positionX
-        positionY
-        currentRefreshRate
-      }
-      controller {
-        model
-        vendor
-        bus
-        vram
-        vramDynamic
-      }
-      controllers {
-        model
-        vendor
-        bus
-        vram
-        vramDynamic
-      }
-    }
-    OS {
-      info {
-        platform
-        distro
-        release
-        codename
-        kernel
-        arch
-        codepage
-        logofile
-        serial
-        build
-        servicepack
-        uefi
-      }
-      user {
-        user
-        tty
-        date
-        time
-        ip
-        command
-      }
-      uuid {
-        os
-      }
-      users {
-        user
-        tty
-        date
-        time
-        ip
-        command
-      }
-      shell {
-        string
-      }
-      versions {
-        node
-        npm
-      }
-    }
-    Processes {
-      process {
-        all
-        running
-        blocked
-        sleeping
-        unknown
-      }
-      fullLoad {
-        number
-      }
-      currentLoad {
-        avgload
-        currentload
-        currentload_user
-        currentload_system
-        currentload_nice
-        currentload_idle
-        currentload_irq
-        raw_currentload
-      }
-    }
-
-    DiskFileSystem {
-      FsSize {
-        fs
-        type
-        size
-        used
-        use
-        mount
-      }
-      disksIO {
-        rIO
-        wIO
-        tIO
-        rIO_sec
-        wIO_sec
-        tIO_sec
-        ms
-      }
-      fsStats {
-        rx
-        wx
-        tx
-        rx_sec
-        wx_sec
-        tx_sec
-        ms
-      }
-      diskLayout {
-        device
-        type
-        name
-        vendor
-        size
-        totalCylinders
-        totalHeads
-        totalTracks
-        totalSectors
-        tracksPerCylinder
-        sectorsPerTrack
-        bytesPerSector
-        firmwareRevision
-        serialNum
-        interfaceType
-        smartStatus
-      }
-      fsOpenFiles {
-        max
-        allocated
-        available
-      }
-      blockDevices {
-        name
-        type
-        fstype
-        mount
-        size
-        physical
-        uuid
-        label
-        model
-        serial
-        removable
-        protocol
-      }
-    }
-    Network {
-      networkStats {
-        iface
-        operstate
-        rx_bytes
-        rx_dropped
-        rx_errors
-        tx_bytes
-        tx_dropped
-        tx_errors
-        rx_sec
-        tx_sec
-        ms
-      }
-      networkInterface {
-        iface
-        ifaceName
-        ip4
-        ip6
-        mac
-        internal
-        virtual
-        operstate
-        type
-        duplex
-        mtu
-        speed
-        dhcp
-        dnsSuffix
-        ieee8021xAuth
-        ieee8021xState
-        carrierChanges
-      }
-      networkInterfaces {
-        iface
-        ifaceName
-        ip4
-        ip6
-        mac
-        internal
-        virtual
-        operstate
-        type
-        duplex
-        mtu
-        speed
-        dhcp
-        dnsSuffix
-        ieee8021xAuth
-        ieee8021xState
-        carrierChanges
-      }
-      networkConnections {
-        protocol
-        localaddress
-        localport
-        peeraddress
-        peerport
-        state
-        pid
-        process
-      }
-      networkGatewayDefault {
-        string
-      }
-      networkInterfaceDefault {
-        string
-      }
-    }
-    Wifi {
-      wifiNetwork {
-        ssid
-        bssid
-        mode
-        channel
-        frequency
-        signalLevel
-        quality
-      }
-      wifiNetworks {
-        ssid
-        bssid
-        mode
-        channel
-        frequency
-        signalLevel
-        quality
-      }
-    }
-    Docker {
-      info {
-        id
-      }
-    }
-    VirtualBox {
-      info {
-        id
-      }
+    baseboard {
+      manufacturer
+      model
+      version
+      serial
+      assetTag
     }
   }
+  Cpu {
+    cpu {
+      manufacturer
+      brand
+      speed
+      speedmin
+      speedmax
+      governor
+      cores
+      physicalCores
+      processors
+      socket
+      vendor
+      family
+      model
+      stepping
+      revision
+      voltage
+    }
+    flag {
+      string
+    }
+    cache {
+      l1d
+      l1i
+      l2
+      l3
+    }
+    temperature {
+      main
+      max
+    }
+    currentspeed {
+      avg
+      min
+      max
+    }
+  }
+  Memory {
+    memory {
+      total
+      free
+      speed
+      used
+      active
+      buffcache
+      buffers
+      cached
+      slab
+      available
+      swaptotal
+      swapused
+      swapfree
+    }
+    layout {
+      size
+      bank
+      type
+      clockSpeed
+      formFactor
+      manufacturer
+      partNum
+      serialNum
+      voltageConfigured
+      voltageMin
+      voltageMax
+    }
+    layouts {
+      size
+      bank
+      type
+      clockSpeed
+      formFactor
+      manufacturer
+      partNum
+      serialNum
+      voltageConfigured
+      voltageMin
+      voltageMax
+    }
+  }
+  Battery {
+    battery {
+      hasbattery
+      cyclecount
+      ischarging
+      designedcapacity
+      maxcapacity
+      currentcapacity
+      capacityUnit
+      voltage
+      percent
+      timeremaining
+      acconnected
+      type
+      model
+      manufacturer
+      serial
+    }
+  }
+  Graphics {
+    display {
+      model
+      vendor
+      main
+      builtin
+      connection
+      sizex
+      sizey
+      pixeldepth
+      resolutionx
+      resolutiony
+      currentResX
+      currentResY
+      positionX
+      positionY
+      currentRefreshRate
+    }
+    displays {
+      model
+      vendor
+      main
+      builtin
+      connection
+      sizex
+      sizey
+      pixeldepth
+      resolutionx
+      resolutiony
+      currentResX
+      currentResY
+      positionX
+      positionY
+      currentRefreshRate
+    }
+    controller {
+      model
+      vendor
+      bus
+      vram
+      vramDynamic
+    }
+    controllers {
+      model
+      vendor
+      bus
+      vram
+      vramDynamic
+    }
+  }
+  OS {
+    info {
+      platform
+      distro
+      release
+      codename
+      kernel
+      arch
+      codepage
+      logofile
+      serial
+      build
+      servicepack
+      uefi
+    }
+    user {
+      user
+      tty
+      date
+      time
+      ip
+      command
+    }
+    uuid {
+      os
+    }
+    users {
+      user
+      tty
+      date
+      time
+      ip
+      command
+    }
+    versions {
+      node
+      npm
+    }
+  }
+  Processes {
+    process {
+      all
+      running
+      blocked
+      sleeping
+      unknown
+    }
+    fullLoad {
+      number
+    }
+    currentLoad {
+      avgload
+      currentload
+      currentload_user
+      currentload_system
+      currentload_nice
+      currentload_idle
+      currentload_irq
+      raw_currentload
+    }
+  }
+  DiskFileSystem {
+    FsSize {
+      fs
+      type
+      size
+      used
+      use
+      mount
+    }
+    diskLayout {
+      device
+      type
+      name
+      vendor
+      size
+      totalCylinders
+      totalHeads
+      totalTracks
+      totalSectors
+      tracksPerCylinder
+      sectorsPerTrack
+      bytesPerSector
+      firmwareRevision
+      serialNum
+      interfaceType
+      smartStatus
+    }
+    fsOpenFiles {
+      max
+      allocated
+      available
+    }
+    blockDevices {
+      name
+      type
+      fstype
+      mount
+      size
+      physical
+      uuid
+      label
+      model
+      serial
+      removable
+      protocol
+    }
+  }
+  Network {
+    networkStats {
+      iface
+      operstate
+      rx_bytes
+      rx_dropped
+      rx_errors
+      tx_bytes
+      tx_dropped
+      tx_errors
+      rx_sec
+      tx_sec
+      ms
+    }
+    networkInterface {
+      iface
+      ifaceName
+      ip4
+      ip6
+      mac
+      internal
+      virtual
+      operstate
+      type
+      duplex
+      mtu
+      speed
+      dhcp
+      dnsSuffix
+      ieee8021xAuth
+      ieee8021xState
+      carrierChanges
+    }
+    networkInterfaces {
+      iface
+      ifaceName
+      ip4
+      ip6
+      mac
+      internal
+      virtual
+      operstate
+      type
+      duplex
+      mtu
+      speed
+      dhcp
+      dnsSuffix
+      ieee8021xAuth
+      ieee8021xState
+      carrierChanges
+    }
+    networkConnections {
+      protocol
+      localaddress
+      localport
+      peeraddress
+      peerport
+      state
+      pid
+      process
+    }
+    networkGatewayDefault {
+      string
+    }
+    networkInterfaceDefault {
+      string
+    }
+  }
+  Wifi {
+    wifiNetwork {
+      ssid
+      bssid
+      mode
+      channel
+      frequency
+      signalLevel
+      quality
+    }
+    wifiNetworks {
+      ssid
+      bssid
+      mode
+      channel
+      frequency
+      signalLevel
+      quality
+    }
+  }
+  Docker {
+    info {
+      id
+    }
+  }
+  VirtualBox {
+    info {
+      id
+    }
+  }
+}
+
 `;
 
 export default SystemInformation;

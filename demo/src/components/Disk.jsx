@@ -16,27 +16,10 @@ const Disk = ({ data }) => {
               defaultValue={JSON.stringify(data.DiskFileSystem.FsSize)}
             />
           </div>
-          <div class="card-body">
-            <h5 class="card-title">{data.DiskFileSystem.disksIO.__typename}</h5>
 
-            <textarea
-              class="form-control"
-              rows="5"
-              defaultValue={JSON.stringify(data.DiskFileSystem.disksIO)}
-            />
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">{data.DiskFileSystem.fsStats.__typename}</h5>
-
-            <textarea
-              class="form-control"
-              rows="5"
-              defaultValue={JSON.stringify(data.DiskFileSystem.fsStats)}
-            />
-          </div>
           <div class="card-body">
             <h5 class="card-title">
-              {data.DiskFileSystem.fsOpenFiles.__typename}
+              List of open files
             </h5>
 
             <textarea
@@ -47,9 +30,8 @@ const Disk = ({ data }) => {
           </div>
           <div class="card-body">
             <h5 class="card-title">
-              {data.DiskFileSystem.blockDevices.__typename}
+              List of block devices
             </h5>
-
             <textarea
               class="form-control"
               rows="5"
