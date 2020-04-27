@@ -8,21 +8,35 @@ const Hardware = ({ data }) => {
           <h5 class="card-header"> {data.Hardware.__typename} </h5>
           <div class="card-body">
             <h5 class="card-title">{data.Hardware.system.__typename}</h5>
-            <div class="card-text">{JSON.stringify(data.Hardware.system)}</div>
+            <textarea
+              class="form-control"
+              rows="5"
+              defaultValue={JSON.stringify(data.Hardware.system)}
+            />
           </div>
           <div class="card-body">
             <h5 class="card-title">{data.Hardware.bios.__typename}</h5>
-            <div class="card-text">{JSON.stringify(data.Hardware.bios)}</div>
+            <textarea
+              class="form-control"
+              rows="5"
+              defaultValue={JSON.stringify(data.Hardware.bios)}
+            />
           </div>
           <div class="card-body">
             <h5 class="card-title">{data.Hardware.chassis.__typename}</h5>
-            <div class="card-text">{JSON.stringify(data.Hardware.chassis)}</div>
+            <textarea
+              class="form-control"
+              rows="5"
+              defaultValue={JSON.stringify(data.Hardware.chassis)}
+            />
           </div>
           <div class="card-body">
             <h5 class="card-title">{data.Hardware.baseboard.__typename}</h5>
-            <div class="card-text">
-              {JSON.stringify(data.Hardware.baseboard)}
-            </div>
+            <textarea
+              class="form-control"
+              rows="5"
+              defaultValue={JSON.stringify(data.Hardware.baseboard)}
+            />
           </div>
         </div>
       </div>

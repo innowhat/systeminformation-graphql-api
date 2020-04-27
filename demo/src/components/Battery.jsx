@@ -9,7 +9,11 @@ const Battery = ({ data }) => {
           <h5 class="card-header"> {data.Battery.__typename} </h5>
           <div class="card-body">
             <h5 class="card-title">{data.Battery.battery.__typename}</h5>
-            <div class="card-text">{JSON.stringify(data.Battery.battery)}</div>
+            <textarea
+              class="form-control"
+              rows="5"
+              defaultValue={JSON.stringify(data.Battery.battery)}
+            />
           </div>
         </div>
       </div>

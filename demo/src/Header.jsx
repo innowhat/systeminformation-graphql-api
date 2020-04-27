@@ -9,6 +9,7 @@ const Header = () => {
           <p class="lead">
             A light weight node/express service to access APIs of
             <a
+              class="text-info"
               href="https://github.com/sebhildebrandt/systeminformation"
               target="_blank"
               alt=""
@@ -22,13 +23,14 @@ const Header = () => {
               target="_blank"
               alt=""
               rel="noopener noreferrer"
+              class="text-info"
             >
               GraphQL.
             </a>
           </p>
           <p>
             API end point:
-            <a href="http://localhost:5000/graphql" alt="">
+            <a href="http://localhost:5000/graphql" alt="" class="text-info">
               http://localhost:5000/graphql
             </a>
           </p>

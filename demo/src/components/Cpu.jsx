@@ -8,23 +8,44 @@ const Cpu = ({ data }) => {
           <h5 class="card-header"> {data.Cpu.__typename} </h5>
           <div class="card-body">
             <h5 class="card-title">{data.Cpu.cpu.__typename}</h5>
-            <div class="card-text">{JSON.stringify(data.Cpu.cpu)}</div>
+            <textarea
+              class="form-control"
+              rows="5"
+              defaultValue={JSON.stringify(data.Cpu.cpu)}
+            />
           </div>
           <div class="card-body">
             <h5 class="card-title">{data.Cpu.flag.__typename}</h5>
-            <div class="card-text">{JSON.stringify(data.Cpu.flag)}</div>
+            <textarea
+              class="form-control"
+              rows="5"
+              defaultValue={JSON.stringify(data.Cpu.flag)}
+            />
           </div>
           <div class="card-body">
             <h5 class="card-title">{data.Cpu.cache.__typename}</h5>
-            <div class="card-text">{JSON.stringify(data.Cpu.cache)}</div>
+            <textarea
+              class="form-control"
+              rows="5"
+              defaultValue={JSON.stringify(data.Cpu.cache)}
+            />
           </div>
           <div class="card-body">
             <h5 class="card-title">{data.Cpu.temperature.__typename}</h5>
-            <div class="card-text">{JSON.stringify(data.Cpu.temperature)}</div>
+
+            <textarea
+              class="form-control"
+              rows="5"
+              defaultValue={JSON.stringify(data.Cpu.temperature)}
+            />
           </div>
           <div class="card-body">
             <h5 class="card-title">{data.Cpu.currentspeed.__typename}</h5>
-            <div class="card-text">{JSON.stringify(data.Cpu.currentspeed)}</div>
+            <textarea
+              class="form-control"
+              rows="5"
+              defaultValue={JSON.stringify(data.Cpu.currentspeed)}
+            />
           </div>
         </div>
       </div>

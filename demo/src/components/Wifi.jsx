@@ -9,9 +9,11 @@ const Wifi = ({ data }) => {
           <h5 class="card-header"> {data.Wifi.__typename} </h5>
           <div class="card-body">
             <h5 class="card-title">list of wifi networks</h5>
-            <div class="card-text">
-              {JSON.stringify(data.Wifi.wifiNetworks)}
-            </div>
+            <textarea
+              class="form-control"
+              rows="5"
+              defaultValue={JSON.stringify(data.Wifi.wifiNetworks)}
+            />
           </div>
         </div>
       </div>

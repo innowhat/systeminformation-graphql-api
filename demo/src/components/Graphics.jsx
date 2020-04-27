@@ -9,16 +9,20 @@ const Graphics = ({ data }) => {
           <h5 class="card-header"> {data.Graphics.__typename} </h5>
           <div class="card-body">
             <h5 class="card-title">List of displays</h5>
-            <div class="card-text">
-              {JSON.stringify(data.Graphics.displays)}
-            </div>
-          </div>
 
+            <textarea
+              class="form-control"
+              rows="5"
+              defaultValue={JSON.stringify(data.Graphics.displays)}
+            />
+          </div>
           <div class="card-body">
             <h5 class="card-title">List of controllers</h5>
-            <div class="card-text">
-              {JSON.stringify(data.Graphics.controllers)}
-            </div>
+            <textarea
+              class="form-control"
+              rows="5"
+              defaultValue={JSON.stringify(data.Graphics.controllers)}
+            />
           </div>
         </div>
       </div>

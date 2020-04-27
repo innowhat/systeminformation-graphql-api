@@ -9,12 +9,22 @@ const Memory = ({ data }) => {
           <h5 class="card-header"> {data.Memory.__typename} </h5>
           <div class="card-body">
             <h5 class="card-title">{data.Memory.memory.__typename}</h5>
-            <div class="card-text">{JSON.stringify(data.Memory.memory)}</div>
+
+            <textarea
+              class="form-control"
+              rows="5"
+              defaultValue={JSON.stringify(data.Memory.memory)}
+            />
           </div>
 
           <div class="card-body">
             <h5 class="card-title">Layout list</h5>
-            <div class="card-text">{JSON.stringify(data.Memory.layouts)}</div>
+
+            <textarea
+              class="form-control"
+              rows="5"
+              defaultValue={JSON.stringify(data.Memory.layouts)}
+            />
           </div>
         </div>
       </div>

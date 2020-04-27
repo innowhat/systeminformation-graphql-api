@@ -9,24 +9,45 @@ const Os = ({ data }) => {
           <h5 class="card-header"> {data.OS.__typename} </h5>
           <div class="card-body">
             <h5 class="card-title">{data.OS.info.__typename}</h5>
-            <div class="card-text">{JSON.stringify(data.OS.info)}</div>
+            <textarea
+              class="form-control"
+              rows="5"
+              defaultValue={JSON.stringify(data.OS.info)}
+            />
           </div>
           <div class="card-body">
             <h5 class="card-title">List of users</h5>
-            <div class="card-text">{JSON.stringify(data.OS.users)}</div>
+
+            <textarea
+              class="form-control"
+              rows="5"
+              defaultValue={JSON.stringify(data.OS.users)}
+            />
           </div>
           <div class="card-body">
             <h5 class="card-title">{data.OS.info.uuid}</h5>
-            <div class="card-text">{JSON.stringify(data.OS.uuid)}</div>
+
+            <textarea
+              class="form-control"
+              rows="5"
+              defaultValue={JSON.stringify(data.OS.uuid)}
+            />
           </div>
           <div class="card-body">
             <h5 class="card-title">{data.OS.shell.__typename}</h5>
-            <div class="card-text">{JSON.stringify(data.OS.shell)}</div>
+            <textarea
+              class="form-control"
+              rows="5"
+              defaultValue={JSON.stringify(data.OS.shell)}
+            />
           </div>
-
           <div class="card-body">
             <h5 class="card-title">{data.OS.versions.__typename}</h5>
-            <div class="card-text">{JSON.stringify(data.OS.versions)}</div>
+            <textarea
+              class="form-control"
+              rows="5"
+              defaultValue={JSON.stringify(data.OS.versions)}
+            />
           </div>
         </div>
       </div>

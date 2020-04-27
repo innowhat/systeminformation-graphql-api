@@ -20,7 +20,12 @@ const Footer = () => {
         </p>
         <p class="text-center">
           copyright 2020 @{" "}
-          <a href="https://www.innowhat.com/" target="_blank">
+          <a
+            href="https://www.innowhat.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-info"
+          >
             innowhat.com
           </a>{" "}
         </p>

@@ -9,23 +9,31 @@ const Processes = ({ data }) => {
           <h5 class="card-header"> {data.Processes.__typename} </h5>
           <div class="card-body">
             <h5 class="card-title">{data.Processes.process.__typename}</h5>
-            <div class="card-text">
-              {JSON.stringify(data.Processes.process)}
-            </div>
+            <textarea
+              class="form-control"
+              rows="5"
+              defaultValue={JSON.stringify(data.Processes.process)}
+            />
           </div>
 
           <div class="card-body">
             <h5 class="card-title">{data.Processes.fullLoad.__typename}</h5>
-            <div class="card-text">
-              {JSON.stringify(data.Processes.fullLoad)}
-            </div>
+
+            <textarea
+              class="form-control"
+              rows="5"
+              defaultValue={JSON.stringify(data.Processes.fullLoad)}
+            />
           </div>
 
           <div class="card-body">
             <h5 class="card-title">{data.Processes.currentLoad.__typename}</h5>
-            <div class="card-text">
-              {JSON.stringify(data.Processes.currentLoad)}
-            </div>
+
+            <textarea
+              class="form-control"
+              rows="5"
+              defaultValue={JSON.stringify(data.Processes.currentLoad)}
+            />
           </div>
         </div>
       </div>

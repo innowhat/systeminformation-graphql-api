@@ -9,37 +9,52 @@ const Disk = ({ data }) => {
           <h5 class="card-header"> {data.DiskFileSystem.__typename} </h5>
           <div class="card-body">
             <h5 class="card-title">fsSize list</h5>
-            <div class="card-text">
-              {JSON.stringify(data.DiskFileSystem.FsSize)}
-            </div>
+
+            <textarea
+              class="form-control"
+              rows="5"
+              defaultValue={JSON.stringify(data.DiskFileSystem.FsSize)}
+            />
           </div>
           <div class="card-body">
             <h5 class="card-title">{data.DiskFileSystem.disksIO.__typename}</h5>
-            <div class="card-text">
-              {JSON.stringify(data.DiskFileSystem.disksIO)}
-            </div>
+
+            <textarea
+              class="form-control"
+              rows="5"
+              defaultValue={JSON.stringify(data.DiskFileSystem.disksIO)}
+            />
           </div>
           <div class="card-body">
             <h5 class="card-title">{data.DiskFileSystem.fsStats.__typename}</h5>
-            <div class="card-text">
-              {JSON.stringify(data.DiskFileSystem.fsStats)}
-            </div>
+
+            <textarea
+              class="form-control"
+              rows="5"
+              defaultValue={JSON.stringify(data.DiskFileSystem.fsStats)}
+            />
           </div>
           <div class="card-body">
             <h5 class="card-title">
               {data.DiskFileSystem.fsOpenFiles.__typename}
             </h5>
-            <div class="card-text">
-              {JSON.stringify(data.DiskFileSystem.fsOpenFiles)}
-            </div>
+
+            <textarea
+              class="form-control"
+              rows="5"
+              defaultValue={JSON.stringify(data.DiskFileSystem.fsOpenFiles)}
+            />
           </div>
           <div class="card-body">
             <h5 class="card-title">
               {data.DiskFileSystem.blockDevices.__typename}
             </h5>
-            <div class="card-text">
-              {JSON.stringify(data.DiskFileSystem.blockDevices)}
-            </div>
+
+            <textarea
+              class="form-control"
+              rows="5"
+              defaultValue={JSON.stringify(data.DiskFileSystem.blockDevices)}
+            />
           </div>
         </div>
       </div>

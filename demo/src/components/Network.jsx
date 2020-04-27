@@ -9,39 +9,55 @@ const Network = ({ data }) => {
           <h5 class="card-header"> {data.Network.__typename} </h5>
           <div class="card-body">
             <h5 class="card-title">{data.Network.networkStats.__typename}</h5>
-            <div class="card-text">
-              {JSON.stringify(data.Network.networkStats)}
-            </div>
+
+            <textarea
+              class="form-control"
+              rows="5"
+              defaultValue={JSON.stringify(data.Network.networkStats)}
+            />
           </div>
           <div class="card-body">
             <h5 class="card-title">List of Interface</h5>
-            <div class="card-text">
-              {JSON.stringify(data.Network.networkInterfaces)}
-            </div>
+            <textarea
+              class="form-control"
+              rows="5"
+              defaultValue={JSON.stringify(data.Network.networkInterfaces)}
+            />
           </div>
           <div class="card-body">
             <h5 class="card-title">
               {data.Network.networkConnections.__typename}
             </h5>
-            <div class="card-text">
-              {JSON.stringify(data.Network.networkConnections)}
-            </div>
+
+            <textarea
+              class="form-control"
+              rows="5"
+              defaultValue={JSON.stringify(data.Network.networkConnections)}
+            />
           </div>
           <div class="card-body">
             <h5 class="card-title">
               {data.Network.networkGatewayDefault.__typename}
             </h5>
-            <div class="card-text">
-              {JSON.stringify(data.Network.networkGatewayDefault)}
-            </div>
+
+            <textarea
+              class="form-control"
+              rows="5"
+              defaultValue={JSON.stringify(data.Network.networkGatewayDefault)}
+            />
           </div>
           <div class="card-body">
             <h5 class="card-title">
               {data.Network.networkInterfaceDefault.__typename}
             </h5>
-            <div class="card-text">
-              {JSON.stringify(data.Network.networkInterfaceDefault)}
-            </div>
+
+            <textarea
+              class="form-control"
+              rows="5"
+              defaultValue={JSON.stringify(
+                data.Network.networkInterfaceDefault
+              )}
+            />
           </div>
         </div>
       </div>

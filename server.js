@@ -6,7 +6,7 @@ const cors = require("cors");
 
 const app = express();
 
-// Allow cross-origin source
+// Allow cross-origin source (Access-Control-Allow-Origin)
 app.use(cors());
 
 // Set up express graphql
