@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/litera/bootstrap.min.css" />
+</head>
+
+<body>
+  <main>
+    <div class="jumbotron">
+      <div class="container text-center">
+        <h1 class="display-5">System Information GraphQL API</h1>
+        <p class="lead">
+          A light weight node/express service to access APIs of 
+          <a href="https://github.com/sebhildebrandt/systeminformation" target="_blank">systeminformation</a>  
+          package via  <a href="https://graphql.org/" target="_blank" >GraphQL.</a>
+        </p>
+        <p>
+          API end point: 
+            <a href="http://localhost:5000/graphql">
+              http://localhost:5000/graphql</a>
+          </p>
+
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 mb-3">
+          <div class="card border-secondary h-100">
+            <h5 class="card-header">HARDWARE</h5>
+            <div class="card-body">
+              <h5 class="card-title">
+                Hardware {
+              </h5>
+              <p class="card-text"></p>
+              <span>
+                system{...} <br />
+                bios{...} <br />
+                chassis{...} <br />
+                baseboard{...}
+              </span>
+              </p>
+              <h5 class="card-title">
+                }
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mb-3">
+          <div class="card border-secondary h-100">
+            <h5 class="card-header">CPU</h5>
+            <div class="card-body">
+              <h5 class="card-title">
+                Cpu {
+              </h5>
+              <p class="card-text"></p>
+              <span>
+                cpu{...} <br />
+                flag{...} <br />
+                cache{...} <br />
+                currentspeed{...}
+              </span>
+              </p>
+              <h5 class="card-title">
+                }
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mb-3">
+          <div class="card border-secondary h-100">
+            <h5 class="card-header">MEMORY</h5>
+            <div class="card-body">
+              <h5 class="card-title">
+                Memory {
+              </h5>
+              <p class="card-text"></p>
+              <span>
+                memory{...} <br />
+                layout (bank :"stringValue"){...} <br />
+                layouts{...} <br />
+              </span>
+              </p>
+              <h5 class="card-title">
+                }
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mb-3">
+          <div class="card border-secondary h-100">
+            <h5 class="card-header">BATTERY</h5>
+            <div class="card-body">
+              <h5 class="card-title">
+                Battery {
+              </h5>
+              <p class="card-text"></p>
+              <span>
+                battery{...} <br />
+              </span>
+              </p>
+              <h5 class="card-title">
+                }
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mb-3">
+          <div class="card border-secondary h-100">
+            <h5 class="card-header">GRAPHICS</h5>
+            <div class="card-body">
+              <h5 class="card-title">
+                Graphics {
+              </h5>
+              <p class="card-text"></p>
+              <span>
+                display(model :"stringValue"){...} <br />
+                displays{...} <br />
+                controller{...} <br />
+                controllers{...} <br />
+              </span>
+              </p>
+              <h5 class="card-title">
+                }
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mb-3">
+          <div class="card border-secondary h-100">
+            <h5 class="card-header">OS</h5>
+            <div class="card-body">
+              <h5 class="card-title">
+                OS {
+              </h5>
+              <p class="card-text"></p>
+              <span>
+                info{...} <br />
+                user(user :"stringValue"){...} <br />
+                users{...} <br />
+                uuid{...} <br />
+                shell{...} <br />
+                versions{...} <br />
+              </span>
+              </p>
+              <h5 class="card-title">
+                }
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mb-3">
+          <div class="card border-secondary h-100">
+            <h5 class="card-header">PROCESSES / SERVICES</h5>
+            <div class="card-body">
+              <h5 class="card-title">
+                Processes {
+              </h5>
+              <p class="card-text"></p>
+              <span>
+                process{...} <br />
+                fullLoad{...} <br />
+                currentLoad{...} <br />
+              </span>
+              </p>
+              <h5 class="card-title">
+                }
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mb-3">
+          <div class="card border-secondary h-100">
+            <h5 class="card-header">DISK / FILE SYSTEM</h5>
+            <div class="card-body">
+              <h5 class="card-title">
+                DiskFileSystem {
+              </h5>
+              <p class="card-text"></p>
+              <span>
+                FsSize{...} <br />
+                disksIO{...} <br />
+                fsStats{...} <br />
+                diskLayout{...} <br />
+                fsOpenFiles{...} <br />
+                blockDevices{...} <br />
+              </span>
+              </p>
+              <h5 class="card-title">
+                }
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mb-3">
+          <div class="card border-secondary h-100">
+            <h5 class="card-header">NETWORK</h5>
+            <div class="card-body">
+              <h5 class="card-title">
+                Network {
+              </h5>
+              <p class="card-text"></p>
+              <span>
+                networkStats{...} <br />
+                networkInterface(iface:"stringValue"){...} <br />
+                networkInterfaces{...} <br />
+                networkConnections{...} <br />
+                networkGatewayDefault{...} <br />
+                networkInterfaceDefault{...} <br />
+              </span>
+              </p>
+              <h5 class="card-title">
+                }
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mb-3">
+          <div class="card border-secondary h-100">
+            <h5 class="card-header">WIFI</h5>
+            <div class="card-body">
+              <h5 class="card-title">
+                Wifi {
+              </h5>
+              <p class="card-text"></p>
+              <span>
+                wifiNetwork (ssid :"stringValue"){...} <br />
+                wifiNetworks{...} <br />
+              </span>
+              </p>
+              <h5 class="card-title">
+                }
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mb-3">
+          <div class="card border-secondary h-100">
+            <h5 class="card-header">DOCKER</h5>
+            <div class="card-body">
+              <h5 class="card-title">
+                Docker {
+              </h5>
+              <p class="card-text"></p>
+              <span>
+                info{...} <br />
+              </span>
+              </p>
+              <h5 class="card-title">
+                }
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mb-3">
+          <div class="card border-secondary h-100">
+            <h5 class="card-header">VIRTUAL BOX</h5>
+            <div class="card-body">
+              <h5 class="card-title">
+                VirtualBox {
+              </h5>
+              <p class="card-text"></p>
+              <span>
+                info{...} <br />
+              </span>
+              </p>
+              <h5 class="card-title">
+                }
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <footer class="footer" >
+    <div class="container text-center" style="padding: 50px 0;" >
+      <p>
+        <a href="https://github.com/innowhat/systeminformation-graphql-api"  class="btn btn-secondary btn-sm"> 
+          <img src="https://images.ctfassets.net/dnrnjrgdcqxo/1PJ37TouYuzOkD5QhrKmqT/90157b288e647a465bf74940eeb48aa0/github.svg" width="30" alt="source code" />
+        </a>
+      </p>
+      <p class="text-center">copyright 2020 @ <a href="https://www.innowhat.com/" target="_blank">innowhat.com</a>  </p>
+    </div>
+  </footer>
+  <script src="" async defer></script>
+</body>
+
+</html>
